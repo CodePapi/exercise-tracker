@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const uri = process.env.ATLAS_URI;
+const uri = "mongodb+srv://major:<password>@cluster0-el0eg.gcp.mongodb.net/test?retryWrites=true&w=majority"
 mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true})
 
 const connection = mongoose.connection;

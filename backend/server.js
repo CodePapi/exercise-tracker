@@ -12,8 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 
-const uri = "mongodb+srv://major:<password>@cluster0-el0eg.gcp.mongodb.net/test?retryWrites=true&w=majority"
-mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true})
+const uri = "mongodb://localhost:27017/exercise"
+mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true})
 
 const connection = mongoose.connection;
 connection.once("open", ()=>{
